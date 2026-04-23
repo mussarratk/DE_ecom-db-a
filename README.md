@@ -9,7 +9,7 @@
 
 ## 📌 Project Overview
 
-This project was developed during the **Codebasics Data Engineering Virtual Internship**. It implements a scalable, automated data pipeline for **Atliq**, a simulated retail company. The pipeline ingests, validates, and transforms messy finance and sales data into analytics-ready Delta tables using a **Medallion Architecture**.
+This project was developed during the **Data Engineering Virtual Internship**. It implements a scalable, automated data pipeline for **Atliq**, a simulated retail company. The pipeline ingests, validates, and transforms messy finance and sales data into analytics-ready Delta tables using a **Medallion Architecture**.
 
 ### ⚡ Key Features
 

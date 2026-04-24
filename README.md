@@ -32,6 +32,8 @@ The solution combines AWS serverless capabilities with the high-performance proc
 4.  **Transformation Layer (Silver):** **Databricks** processes Bronze data, performing currency normalization (USD to INR), date standardization, and business logic joins.
 5.  **Storage Layer:** Final datasets are stored as **Delta Lake** tables, supporting ACID transactions and schema enforcement.
 
+<img width="311" height="477" alt="image" src="https://github.com/user-attachments/assets/c9bcc21e-eec0-4d31-aac7-ded998435ef5" />
+
 -----
 
 ## 🛠 Tech Stack
@@ -58,6 +60,8 @@ In the Databricks environment, the following logic is applied to create the `fin
   * **Feature Engineering:** \* Calculated `Profit Margin`.
       * Categorized transactions into `Domestic` vs `International`.
   * **Optimization:** Data is stored in Delta format to enable **Time Travel** and **Change Data Feed (CDF)**.
+    
+<img width="834" height="463" alt="image" src="https://github.com/user-attachments/assets/c00aa5e6-8958-4016-9088-f068d5f2b0cf" />
 
 -----
 

@@ -140,12 +140,29 @@ Step 1: a) Visual Configure the AWS Glue Job
 
 <img width="903" height="423" alt="image" src="https://github.com/user-attachments/assets/5f229973-9881-483f-84e3-443548016854" />
 
+- IAM
+<img width="1353" height="427" alt="image" src="https://github.com/user-attachments/assets/5a57f0b3-acfc-490b-924b-cc534728b0b0" />
+<img width="1343" height="349" alt="image" src="https://github.com/user-attachments/assets/8eec3132-9604-4edd-a132-cc9c5bdcf397" />
+<img width="1356" height="391" alt="image" src="https://github.com/user-attachments/assets/477729c5-0157-4892-8283-02c9439f1be6" />
 
+ 
 - Configure an AWS Lambda trigger to execute the Glue Job whenever a new file lands in any raw/ subfolder.
+<img width="1338" height="468" alt="image" src="https://github.com/user-attachments/assets/49a615fb-1d50-4bba-a32b-e7309b9d0f76" />
 
+Lambda successfully told Glue to start the job
+<img width="1359" height="593" alt="image" src="https://github.com/user-attachments/assets/b35bdb26-439b-4312-a52c-793c2f3ae5bb" />
+<img width="1357" height="554" alt="image" src="https://github.com/user-attachments/assets/6831cc5d-a24d-44db-b14c-e76511e6493c" />
 
+<img width="1357" height="557" alt="image" src="https://github.com/user-attachments/assets/983bc830-5d39-42b5-ae5e-86ca64b9c2fa" />
+<img width="1362" height="579" alt="image" src="https://github.com/user-attachments/assets/08d4efad-82e2-40f4-92dd-8f49aaf9b7e6" />
+<img width="1366" height="563" alt="image" src="https://github.com/user-attachments/assets/86a06811-a366-4d16-a9eb-98b6102453a8" />
+- output logs - CloudWatch
+<img width="1360" height="541" alt="image" src="https://github.com/user-attachments/assets/c21fb904-e385-43e2-a2bb-b41737ebcf64" />
+<img width="1357" height="481" alt="image" src="https://github.com/user-attachments/assets/559e9d8d-bf0c-46e3-802a-c6a35d949d3d" />
 
-
+- as soon as upload new sales file - auto AWS Lambda trigger - "All object create events", the very second that file finished uploading to your S3 folder, a "notification" was sent to your Lambda, which should have already started your Glue job.
+<img width="1359" height="465" alt="image" src="https://github.com/user-attachments/assets/bb36e83a-f35e-4638-b96c-4de8e6a35d58" />
+<img width="1343" height="519" alt="image" src="https://github.com/user-attachments/assets/942f0f02-40d8-4b8c-a2cf-64269939ae7b" />
 
 
 ---

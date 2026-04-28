@@ -142,7 +142,6 @@ Step 1: a) Visual Configure the AWS Glue Job
 
 - IAM
 <img width="1353" height="427" alt="image" src="https://github.com/user-attachments/assets/5a57f0b3-acfc-490b-924b-cc534728b0b0" />
-<img width="1343" height="349" alt="image" src="https://github.com/user-attachments/assets/8eec3132-9604-4edd-a132-cc9c5bdcf397" />
 <img width="1356" height="391" alt="image" src="https://github.com/user-attachments/assets/477729c5-0157-4892-8283-02c9439f1be6" />
 
  
@@ -163,6 +162,25 @@ Lambda successfully told Glue to start the job
 - as soon as upload new sales file - auto AWS Lambda trigger - "All object create events", the very second that file finished uploading to your S3 folder, a "notification" was sent to your Lambda, which should have already started your Glue job.
 <img width="1359" height="465" alt="image" src="https://github.com/user-attachments/assets/bb36e83a-f35e-4638-b96c-4de8e6a35d58" />
 <img width="1343" height="519" alt="image" src="https://github.com/user-attachments/assets/942f0f02-40d8-4b8c-a2cf-64269939ae7b" />
+
+
+
+
+
+---
+- Based on the CloudWatch logs you've shared, your pipeline successfully caught the "bad" data for both Finance and Sales.
+
+### **Data Validation Summary**
+
+| Dataset | Total Rows | Valid (Bronze) | **Invalid (Rejected)** |
+| :--- | :--- | :--- | :--- |
+| **Finance** | 508 | 428 | **80** |
+| **Sales** | 505 | 391 | **114** |
+| **Total** | **1,013** | **819** | **194** |
+
+---
+
+
 
 
 ---

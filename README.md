@@ -61,7 +61,7 @@ In the Databricks environment, the following logic is applied to create the `fin
       * Categorized transactions into `Domestic` vs `International`.
   * **Optimization:** Data is stored in Delta format to enable **Time Travel** and **Change Data Feed (CDF)**.
     
-<img width="834" height="463" alt="image" src="https://github.com/user-attachments/assets/c00aa5e6-8958-4016-9088-f068d5f2b0cf" />
+<img width="1051" height="569" alt="image" src="https://github.com/user-attachments/assets/abc2242c-9500-45dc-86cd-3e28d0da492d" />
 
 -----
 
@@ -194,6 +194,7 @@ Lambda successfully told Glue to start the job
 
 <img width="1085" height="575" alt="image" src="https://github.com/user-attachments/assets/95f55c57-401a-4144-a067-ec94b17265e4" />
 <img width="1042" height="424" alt="image" src="https://github.com/user-attachments/assets/42485976-79fc-4ac1-bdbb-554e4c6f2210" />
+<img width="1310" height="615" alt="image" src="https://github.com/user-attachments/assets/048a5dfe-9100-4ba7-b638-1e00458c9d72" />
 
 
 

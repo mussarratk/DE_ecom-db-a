@@ -184,6 +184,17 @@ Lambda successfully told Glue to start the job
 
 <img width="1358" height="478" alt="image" src="https://github.com/user-attachments/assets/01d82f6a-448e-4570-b21b-b869905627b7" />
 
+----
+# Bronze_to_Silver - Transformation in Databricks
+
+<img width="1239" height="633" alt="image" src="https://github.com/user-attachments/assets/389a94bb-680c-450e-a875-62ca708b5df1" />
+<img width="864" height="625" alt="image" src="https://github.com/user-attachments/assets/b1854b22-6d23-46a7-b8a9-89e8176c65dc" />
+<img width="1200" height="580" alt="image" src="https://github.com/user-attachments/assets/8d5482e0-d7b7-44f3-920a-26537c8eef6b" />
+<img width="1236" height="631" alt="image" src="https://github.com/user-attachments/assets/051a3118-c89a-4f4e-84a5-04d8c45a8cc4" />
+
+
+
+
 
 
 ---

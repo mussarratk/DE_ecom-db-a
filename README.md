@@ -192,6 +192,8 @@ Lambda successfully told Glue to start the job
 <img width="1200" height="580" alt="image" src="https://github.com/user-attachments/assets/8d5482e0-d7b7-44f3-920a-26537c8eef6b" />
 <img width="1236" height="631" alt="image" src="https://github.com/user-attachments/assets/051a3118-c89a-4f4e-84a5-04d8c45a8cc4" />
 
+<img width="1085" height="575" alt="image" src="https://github.com/user-attachments/assets/95f55c57-401a-4144-a067-ec94b17265e4" />
+<img width="1042" height="424" alt="image" src="https://github.com/user-attachments/assets/42485976-79fc-4ac1-bdbb-554e4c6f2210" />
 
 
 

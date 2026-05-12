@@ -11,6 +11,20 @@
 
 This project was developed during the **Data Engineering Virtual Internship**. It implements a scalable, automated data pipeline for **Atliq**, a simulated retail company. The pipeline ingests, validates, and transforms messy finance and sales data into analytics-ready Delta tables using a **Medallion Architecture**.
 
+---
+
+## Problem Statement
+Atliq receives finance and sales datasets from multiple operational systems. These datasets often arrive with inconsistencies such as missing fields, incorrect schemas, null values, and varying formats.
+
+Without an automated pipeline:
+- Data quality issues can propagate into analytics
+- Manual ingestion slows down reporting workflows
+- Lack of metadata logging makes troubleshooting difficult
+- Business teams cannot reliably track data freshness or lineage
+To address this, a serverless and scalable data engineering pipeline was required to automatically validate incoming data, maintain ingestion logs, and transform raw datasets into analytics-ready tables.
+
+---
+
 ### ⚡ Key Features
 
   * **Event-Driven Ingestion:** Automated triggers using S3 Events and AWS Lambda.
@@ -29,7 +43,7 @@ The solution combines AWS serverless capabilities with the high-performance proc
       * *Success:* Data moves to the **Bronze** folder (Parquet).
       * *Failure:* Invalid records are routed to a **Rejected** folder for auditing.
 3.  **Observability Layer:** Metadata (run IDs, record counts, timestamps) is logged to **Amazon DynamoDB** and exported to **Amazon Athena** for querying.
-4.  **Transformation Layer (Silver):** **Databricks** processes Bronze data, performing currency normalization (USD to INR), date standardization, and business logic joins.
+4.  **Transformation Layer (Bronze -> Silver):** **Databricks** processes Bronze data, performing currency normalization (USD to INR), date standardization, and business logic joins.
 5.  **Storage Layer:** Final datasets are stored as **Delta Lake** tables, supporting ACID transactions and schema enforcement.
 
 <img width="311" height="477" alt="image" src="https://github.com/user-attachments/assets/c9bcc21e-eec0-4d31-aac7-ded998435ef5" />
@@ -86,9 +100,29 @@ We track the health of the pipeline through a dedicated monitoring view in Amazo
 
 ## 🎓 Key Learnings
 
+- This project provided practical experience in building production-style data pipelines and solving common data engineering challenges.
+- Handling inconsistent schemas: Incoming files occasionally contained missing columns or structural inconsistencies. Schema validation logic ensured invalid records were isolated rather than breaking the pipeline.
+- Ensuring ingestion traceability: Tracking ingestion runs across distributed systems can be difficult. Implementing metadata logging using DynamoDB combined with Parquet-based analytical logs enabled both operational monitoring and SQL-based auditing.
+- Data standardization during transformation: Datasets contained inconsistent date formats and currency representations. These were standardized within Spark transformations to ensure reliable downstream analytics.
+
   * Building robust **Schema-on-Read** validation logic to prevent pipeline breakage.
   * Managing state and metadata in a distributed environment using **DynamoDB**.
   * Leveraging **Delta Lake** features like schema enforcement to ensure data reliability for downstream business users.
+ 
+## Future Enhancements
+Possible improvements to further scale the platform include:
+
+- CI/CD pipelines for automated deployment
+- Advanced monitoring with Amazon CloudWatch
+- Automated data quality alerts
+- Centralized data governance and cataloging
+- Implementation of a Gold layer for BI dashboards
+- Automated schema evolution handling
+  
+## Conclusion
+This project simulates real-world data engineering responsibilities by implementing an end-to-end cloud-native pipeline that automates ingestion, enforces data quality, maintains metadata logging, and delivers analytics-ready datasets.
+
+It demonstrates practical experience with AWS serverless data engineering, Databricks-based transformations, and Delta Lake architecture, closely mirroring production data platforms used in modern organizations.
 
 -----
 
@@ -102,9 +136,10 @@ We track the health of the pipeline through a dedicated monitoring view in Amazo
 Step 1: create buckete atliq-de-mus
 s3://atliq-de-mus/ (S3 Bucket)
 
+
 📁 raw/ 
- 📁 finance/
- 📁 sales/
+  📁 finance/
+  📁 sales/
 📁 rejected/ 
 📁 bronze/ (Created automatically by the Glue Job!)
 
